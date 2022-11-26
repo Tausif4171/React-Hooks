@@ -46,7 +46,9 @@ const UseState = () => {
         />
         <button>Submit</button>
       </form>
-      <h3>{name}</h3>
+      {fruits.map((item) => {
+        return <li>{item.name}</li>;
+      })}
     </div>
   );
 };
