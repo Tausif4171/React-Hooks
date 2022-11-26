@@ -1,4 +1,4 @@
-// React Hooks is a backbone of react it is used in functional component.
+// React Hooks are the backbone of using functional component.
 import React, { useState } from "react";
 
 const UseState = () => {
@@ -30,13 +30,18 @@ const UseState = () => {
   return (
     <div>
       <h3>UseState</h3>
+
       <h4>Hello, {flag ? name : ""}</h4>
       <button onClick={changeName}>Click me</button>
+
       <hr></hr>
+
       <button onClick={increment}>+</button>
       <h4>{step}</h4>
       <button onClick={decrement}>-</button>
+
       <hr></hr>
+
       <form onSubmit={addFruits}>
         <input
           type="text"
@@ -46,6 +51,7 @@ const UseState = () => {
         />
         <button>Submit</button>
       </form>
+
       {fruits.map((item) => {
         return <li>{item.name}</li>;
       })}
