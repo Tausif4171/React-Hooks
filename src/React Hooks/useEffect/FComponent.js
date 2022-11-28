@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const FComponent = () => {
   const [message, setMessage] = useState("Functional based Component");
@@ -7,7 +7,11 @@ const FComponent = () => {
   const showDate = () => {
     setTime(new Date().toString());
   };
-  
+
+  useEffect(()=>{
+    console.log("Component mounted or updated")
+  },[time])
+
   return (
     <div>
       <h4>{message}</h4>

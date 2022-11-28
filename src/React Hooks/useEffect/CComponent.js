@@ -7,16 +7,16 @@ class CComponent extends Component {
     }
 
     componentDidMount(){
-        console.log("I am from componentDidMount")
+        // console.log("I am from componentDidMount")
         this.interval = setInterval(this.showDate,1000)
     }
     
     componentDidUpdate(){
-        console.log("I am from componentDidUpdate")
+        // console.log("I am from componentDidUpdate")
     }
 
     componentWillUnmount(){
-        console.log("I am from componentWillUnmount")
+        // console.log("I am from componentWillUnmount")
         clearInterval(this.interval)
     }
 
