@@ -29,7 +29,7 @@ const UseState = () => {
 
   return (
     <div>
-      <h3>UseState</h3>
+      <h3>useState ☑️</h3>
 
       <h4>Hello, {flag ? name : ""}</h4>
       <button onClick={changeName}>Click me</button>
