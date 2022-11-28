@@ -8,9 +8,16 @@ const FComponent = () => {
     setTime(new Date().toString());
   };
 
-  useEffect(()=>{
-    console.log("Component mounted or updated")
-  },[time])
+  useEffect(() => {
+    console.log("Component mounted or updated");
+    const interval = setInterval(showDate, 1000);
+
+    // componentWillUnmount
+    return () => {
+      console.log("cleanup of interval");
+      clearInterval(interval);
+    };
+  }, [time]);
 
   return (
     <div>
