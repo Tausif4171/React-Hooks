@@ -5,19 +5,18 @@ function UseRef() {
   const [counter, setCounter] = useState(0);
 
   // DOM Reference - Using useRef we can manipulate the DOM or access the DOM elements.
-  const inputE1Ref = useRef();
-  console.log(inputE1Ref.current);
+  const inputE1Ref = useRef("");
+  //   console.log(inputE1Ref);
 
-  // UseRef for storing the previous state
-  // Hold mutable value prevent re-render of component
-  const previousCounterRef = useRef();
-  console.log(previousCounterRef.current);
+  // UseRef also used for storing the previous state or between the re-render of the component useRef.current property holds the previous state value.
+  // Also it hold the mutable value and prevent re-render of component
+  const previousCounterRef = useRef("");
+  //   console.log(previousCounterRef.current);
 
   const resetInput = () => {
     setName("");
     inputE1Ref.current.focus();
-    console.log(inputE1Ref.current.value);
-    inputE1Ref.current.value = "pqr"; // we can't do like this if we want to update used useState Hook
+    // inputE1Ref.current.value = "pqr"; // we can't do like this if we want to update used useState Hook
   };
 
   useEffect(() => {
