@@ -41,10 +41,22 @@ const UseMemo = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <h4>My name is: {name}</h4>
+        <DisplayName name={name} />
       </div>
     </div>
   );
 };
+
+// Referential equality - Here by using useMemo the DisplayName component not re-render because the referential equality is same 
+// means while increment or decrement time the reference is same in memory for name state,
+// and yes the reference change of name state when we write something in input field than the component re-render.
+const DisplayName=React.memo(({name})=>{
+    console.log("rendered");
+    return (
+        <div>
+            <h4>{`My name is: ${name}`}</h4>
+        </div>
+    )
+})
 
 export default UseMemo;
