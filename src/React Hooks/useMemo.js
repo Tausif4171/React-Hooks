@@ -14,6 +14,7 @@ function factorial(n) {
     return n * factorial(n - 1);
   }
 }
+
 /* 
    useMemo use cases:
    1. Optimize expensive or heavy operation
@@ -22,6 +23,8 @@ function factorial(n) {
 const UseMemo = () => {
   const [counter, setCounter] = useState(1);
   const [name, setName] = useState("");
+  // console.log(typeof(name))
+
   const result = useMemo(() => {
     return factorial(counter);
   }, [counter]);
@@ -47,16 +50,16 @@ const UseMemo = () => {
   );
 };
 
-// Referential equality - Here by using useMemo the DisplayName component not re-render because the referential equality is same 
+// Referential equality - Here by using useMemo the DisplayName component not re-render because the referential equality is same
 // means while increment or decrement time the reference is same in memory for name state,
-// and yes the reference change of name state when we write something in input field than the component re-render.
-const DisplayName=React.memo(({name})=>{
-    console.log("rendered");
-    return (
-        <div>
-            <h4>{`My name is: ${name}`}</h4>
-        </div>
-    )
-})
+// Also Referential equality not same for arrays and objects means a=[1,2] !== b[1,2] or a={name:"john"} !== b={name:"john"} in memory.
+const DisplayName = React.memo(({ name }) => {
+  console.log("rendered");
+  return (
+    <div>
+      <h4>{`My name is: ${name}`}</h4>
+    </div>
+  );
+});
 
 export default UseMemo;
