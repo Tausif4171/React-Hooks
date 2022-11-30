@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 function factorial(n) {
+  //   let i = 0;
+  //   while (i < 20000000) i++; // This while loop perform heavy operation means it will slow down the factorial counting.
+  //   That's why we take useMemo for this function beacuse if we not take than input field or rest of the things in component become slow down.
+
   if (n < 0) {
     return -1;
   }
@@ -14,8 +18,10 @@ function factorial(n) {
 const UseMemo = () => {
   const [counter, setCounter] = useState(1);
   const [name, setName] = useState("");
-  const result = factorial(counter);
-  
+  const result = useMemo(() => {
+    return factorial(counter);
+  }, [counter]);
+
   return (
     <div>
       <h3>UseMemo ☑️</h3>
