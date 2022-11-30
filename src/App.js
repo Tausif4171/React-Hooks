@@ -2,6 +2,7 @@ import "./App.css";
 import UseState from "./React Hooks/useState";
 import Main from './React Hooks/useEffect/Main'
 import UseRef from "./React Hooks/useRef";
+import UseMemo from "./React Hooks/useMemo";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <UseState />
       <Main />
       <UseRef />
+      <UseMemo />
     </div>
   );
 }
