@@ -28,7 +28,7 @@ const UseCallback = () => {
     [name]
   );
 
-  console.log("useCallback: ", printName); // return function
+  console.log("useCallback: ", printName); // return useCallback function
 
   return (
     <div>
@@ -49,7 +49,7 @@ const DisplayName = ({ printName }) => {
   const [value, setValue] = useState("");
 
   useEffect(() => {
-    setValue(printName("Hello"));
+    setValue(printName("Hello")); // useCallback gives us additional feature like passing argument to useCallback function.
     console.log("component rendered");
   }, [printName]);
 
