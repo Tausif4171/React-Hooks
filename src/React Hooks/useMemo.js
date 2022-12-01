@@ -29,7 +29,7 @@ const UseMemo = () => {
     return factorial(counter);
   }, [counter]);
 
-  console.log("useMemo: ", result)  // return value
+  // console.log("useMemo: ", result)  // return value
 
   return (
     <div>
@@ -56,7 +56,7 @@ const UseMemo = () => {
 // means while increment or decrement time the reference is same in memory for name state,
 // Also Referential equality not same for arrays and objects means a=[1,2] !== b[1,2] or a={name:"john"} !== b={name:"john"} in memory.
 const DisplayName = React.memo(({ name }) => {
-  console.log("rendered");
+  // console.log("rendered");
   return (
     <div>
       <h4>{`My name is: ${name}`}</h4>
