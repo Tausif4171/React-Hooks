@@ -29,6 +29,8 @@ const UseMemo = () => {
     return factorial(counter);
   }, [counter]);
 
+  console.log("useMemo: ", result)  // return value
+
   return (
     <div>
       <h3>UseMemo ☑️</h3>
