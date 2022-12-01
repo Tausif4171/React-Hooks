@@ -11,14 +11,22 @@ function factorial(n) {
   }
 }
 
+/*
+  1. Memoize the function (useCallback) VS Memoize the value (useMemo)
+  2. Referential equality for functions
+*/
+
 const UseCallback = () => {
   const [counter, setCounter] = useState(1);
   const [name, setName] = useState("");
   const result = factorial(counter);
 
-  const printName = useCallback(() => {
-    return name;
-  }, [name]);
+  const printName = useCallback(
+    (greeting) => {
+      return greeting + " " + name;
+    },
+    [name]
+  );
 
   console.log("useCallback: ", printName); // return function
 
@@ -41,7 +49,7 @@ const DisplayName = ({ printName }) => {
   const [value, setValue] = useState("");
 
   useEffect(() => {
-    setValue(printName());
+    setValue(printName("Hello"));
     console.log("component rendered");
   }, [printName]);
 
