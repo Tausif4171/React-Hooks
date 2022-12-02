@@ -14,6 +14,7 @@ function factorial(n) {
 /*
   1. Memoize the function (useCallback) VS Memoize the value (useMemo)
   2. Referential equality for functions
+  3. useMemo and useCallback hook is used for performance improvement.
 */
 
 const UseCallback = () => {
