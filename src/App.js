@@ -4,6 +4,7 @@ import Main from './React Hooks/useEffect/Main'
 import UseRef from "./React Hooks/useRef";
 import UseMemo from "./React Hooks/useMemo";
 import UseCallback from "./React Hooks/useCallback";
+import UseContext from "./React Hooks/useContext.js/Main";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <UseRef />
       <UseMemo />
       <UseCallback />
+      <UseContext />
     </div>
   );
 }
