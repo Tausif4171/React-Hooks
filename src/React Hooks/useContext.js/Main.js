@@ -12,12 +12,14 @@ const UseContext = () => {
   return (
     <div>
       <h3>UseContext ☑️</h3>
+      <h3>Main Component</h3>
       <h4>{counter}</h4>
       <button onClick={increment}>Increment</button>
       <button onClick={() => setCounter(counter - 1)}>Decrement</button>
-      <CounterContext.Provider value={counter}>
+      
+      <CounterContext.Provider value={{counter, setCounter}}>
         <FComponent />
-        <CComponent />
+        {/* <CComponent /> */}
       </CounterContext.Provider>
     </div>
   );
