@@ -13,8 +13,8 @@ const UseContext = () => {
       <h4>{counter}</h4>
       <button onClick={increment}>Increment</button>
       <button onClick={()=>setCounter(counter-1)}>Decrement</button>
-      <FComponent />
-      <CComponent />
+      <FComponent counter={counter}/>
+      <CComponent counter={counter}/>
     </div>
   );
 };
