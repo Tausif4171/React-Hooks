@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FComponent from "./FComponent";
 import CComponent from "./CComponent";
-import {CounterContext} from "./CounterContext";
+import { CounterContext } from "./CounterContext";
 
 const UseContext = () => {
   const [counter, setCounter] = useState(0);
@@ -15,11 +15,10 @@ const UseContext = () => {
       <h4>{counter}</h4>
       <button onClick={increment}>Increment</button>
       <button onClick={() => setCounter(counter - 1)}>Decrement</button>
-      <CounterContext.Provider value="hello">
-      <FComponent counter={counter} />
-      <CComponent counter={counter} />
+      <CounterContext.Provider value={counter}>
+        <FComponent />
+        <CComponent />
       </CounterContext.Provider>
-      
     </div>
   );
 };
