@@ -1,6 +1,6 @@
 import "./App.css";
 import UseState from "./React Hooks/useState";
-import Main from './React Hooks/useEffect/Main'
+import Main from "./React Hooks/useEffect/Main";
 import UseRef from "./React Hooks/useRef";
 import UseMemo from "./React Hooks/useMemo";
 import UseCallback from "./React Hooks/useCallback";
