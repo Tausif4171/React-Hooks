@@ -10,5 +10,9 @@ export const useCounter = (initialValue) => {
   function decrement() {
     return setCounter(counter - 1);
   }
-  return [counter, increment, decrement];
+
+  function reset() {
+    return setCounter(initialValue);
+  }
+  return [counter, increment, decrement, reset];
 };
