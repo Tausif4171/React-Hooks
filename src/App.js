@@ -6,6 +6,7 @@ import UseMemo from "./React Hooks/useMemo";
 import UseCallback from "./React Hooks/useCallback";
 import UseContext from "./React Hooks/useContext.js/Main";
 import UseReducer from "./React Hooks/useReducer";
+import Mains from "./React Hooks/Custom React Hook/Mains";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <UseCallback />
       <UseContext />
       <UseReducer />
+      <Mains />
     </div>
   );
 }

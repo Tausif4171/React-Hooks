@@ -8,7 +8,7 @@ const UseReducer = () => {
   const initialState = 0;
 
   const reducer = (state, action) => {
-    console.log("from reducer", state);
+    // console.log("from reducer", state);
     switch (action.type) {
       case "increment":
         return state + 1;
@@ -22,7 +22,7 @@ const UseReducer = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState); // here dispatch which takes an action and performs on the state.
-  console.log({ state });
+//   console.log({ state });
   return (
     <div>
       <h3>UseReducer ☑️</h3>
