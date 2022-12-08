@@ -6,6 +6,9 @@ export const useScreen = () => {
   useEffect(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
+    return ()=>{
+        window.removeEventListener("resize")
+    }
   }, []);
 
   const checkScreenSize = () => {
@@ -17,6 +20,6 @@ export const useScreen = () => {
       return setScreenSize("Small");
     }
   };
-  
+
   return screenSize;
 };
