@@ -7,7 +7,7 @@ export const useScreen = () => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return ()=>{
-        window.removeEventListener("resize")
+        window.removeEventListener("resize")   // clean up event listener after performing event
     }
   }, []);
 
